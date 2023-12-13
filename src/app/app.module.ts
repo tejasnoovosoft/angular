@@ -7,6 +7,7 @@ import {CartComponent} from './cart/cart.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {RouterModule, RouterOutlet} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -20,9 +21,11 @@ import {HttpClientModule} from "@angular/common/http";
     RouterOutlet,
     HttpClientModule,
     RouterModule.forRoot([
+      {path: "", component: HomeComponent, title: "Home | Ecomzy"},
       {path: "home", component: HomeComponent, title: "Home | Ecomzy"},
       {path: "cart", component: CartComponent, title: "Cart | Ecomzy"}
-    ])
+    ]),
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]
