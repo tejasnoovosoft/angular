@@ -1,9 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Product} from "./product.service";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CartService {
   constructor() {
   }

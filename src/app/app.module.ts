@@ -8,13 +8,17 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {RouterModule, RouterOutlet} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {NgOptimizedImage} from "@angular/common";
+import {TestComponent} from './test/test.component';
+import {FormsModule} from "@angular/forms";
+import {CartService} from "./cart.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CartComponent,
-    NavbarComponent
+    NavbarComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -23,11 +27,13 @@ import {NgOptimizedImage} from "@angular/common";
     RouterModule.forRoot([
       {path: "", component: HomeComponent, title: "Home | Ecomzy"},
       {path: "home", component: HomeComponent, title: "Home | Ecomzy"},
-      {path: "cart", component: CartComponent, title: "Cart | Ecomzy"}
+      {path: "cart", component: CartComponent, title: "Cart | Ecomzy"},
+      {path: "test", component: TestComponent, title: "Test | Ecomzy"}
     ]),
-    NgOptimizedImage
+    NgOptimizedImage,
+    FormsModule
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

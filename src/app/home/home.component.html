@@ -1,7 +1,7 @@
 <div class="product-card">
   <div class="card-deck">
     <div class="card" id="scrollable-container" style="width: 18rem;" *ngFor="let product of products">
-      <img src="{{ product.image }}" class="card-img-top product-image" alt="...">
+      <img [src]="product.image" class="card-img-top product-image" alt="...">
       <div class="card-body">
         <h5 class="card-title"> {{ product.title}} </h5>
         <p class="card-text"> {{ product.description}} </p>
