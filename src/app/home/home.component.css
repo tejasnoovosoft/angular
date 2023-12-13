@@ -1,0 +1,31 @@
+.product-card{
+  display: flex;
+  flex-direction: row;
+}
+
+.card{
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.card-deck {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: stretch;
+}
+
+.card {
+  flex: 1 0 auto;
+  width: 250px;
+  height: 400px;
+  margin: 10px;
+  overflow-y : scroll;
+}
+
+.card .text{
+  word-wrap: break-word;
+}
+
+.product-image{
+  height: 200px;
+  padding: 1rem;
+}
