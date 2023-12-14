@@ -13,6 +13,8 @@ import {FormsModule} from "@angular/forms";
 import {CartService} from "./cart.service";
 import { ClassstylebindingComponent } from './classstylebinding/classstylebinding.component';
 import { SizerComponent } from './sizer/sizer.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SizerComponent } from './sizer/sizer.component';
     NavbarComponent,
     TestComponent,
     ClassstylebindingComponent,
-    SizerComponent
+    SizerComponent,
+    DirectivesComponent,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,96 @@
+<div [ngClass]="isSpecial ? 'special' : ''">
+    This is a special class
+</div>
+
+<ul>
+    <li>
+        <label for="saveable">saveable</label>
+        <input type="checkbox" [(ngModel)]="canSave" id="saveable">
+    </li>
+    <li>
+        <label for="modified">modified:</label>
+        <input type="checkbox" [value]="!isUnchanged" (change)="isUnchanged=!isUnchanged" id="modified">
+    </li>
+    <li>
+        <label for="special">special: <input type="checkbox" [(ngModel)]="isSpecial" id="special"></label>
+    </li>
+</ul>
+
+<div [ngClass]="currentClasses">
+    This div should be {{canSave ? "" : "not"}} savable , {{isSpecial ? "" : "not"}} special
+    and {{isUnchanged ? "unchanged" : "modified"}}
+</div>
+
+<hr>
+
+<h1> NgStyle Binding </h1>
+
+<div [ngStyle]="currentStyles">
+    This div implements a NgStyle Binding
+</div>
+
+<hr>
+
+<h1> NgModel </h1>
+<input [(ngModel)]="name" (ngModelChange)="setUpperCase($event)">
+<h3> {{name}} </h3>
+
+<hr>
+
+<h1> NgIf,NgFor </h1>
+
+<div *ngIf="isActive; else disableDiv">
+    Currently div is activated
+</div>
+
+<ng-template #disableDiv>
+    <div>
+        Currently div is not activated
+    </div>
+</ng-template>
+
+<div *ngFor="let item of items; trackBy: trackByItems"> {{item.id}} : {{item.name}} </div>
+<h4 id="ngFor-trackBy">*ngFor trackBy</h4>
+<button type="button" (click)="resetList()">Reset items</button>
+<button type="button" (click)="changeIds()">Change ids</button>
+<button type="button" (click)="clearTrackByCounts()">Clear counts</button>
+
+<p><em>without</em> trackBy</p>
+<div class="box">
+    <div #noTrackBy *ngFor="let item of items; trackBy: trackByItems"> {{item.id}} : {{item.name}} </div>
+    <div id="noTrackByCnt" *ngIf="itemsNoTrackByCount">
+        Item DOM elements change #{{itemsNoTrackByCount}} without trackBy
+    </div>
+</div>
+
+<p>with trackBy</p>
+<div class="box">
+    <div #withTrackBy *ngFor="let item of items; trackBy: trackByItems">{{item.id}} : {{item.name}}</div>
+    <div id="withTrackByCnt" *ngIf="itemsWithTrackByCount">
+        Item DOM elements change #{{itemsWithTrackByCount}} with trackBy
+    </div>
+</div>
+
+<hr>
+
+<h1> NgSwitch </h1>
+<div [ngSwitch]="day">
+    <div *NgSwitchCase="0">
+        Today is Sunday
+    </div>
+    <div *NgSwitchCase="0">
+        Today is Monday
+    </div>
+    <div *NgSwitchCase="0">
+        Today is Tuesday
+    </div>
+    <div *NgSwitchCase="0">
+        Today is Wednesday
+    </div>
+    <div *ngSwitchDefault>
+        In Switch Default
+    </div>
+</div>
+
+
+
