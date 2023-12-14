@@ -13,28 +13,9 @@
   align-items: stretch;
 }
 
-.card {
-  flex: 1 0 auto;
-  width: 250px;
-  height: 400px;
-  margin: 10px;
-}
-
-.card .text{
-  word-wrap: break-word;
-}
 
 .product-image{
   height: 200px;
   padding: 1rem;
 }
 
-#scrollable-container::-webkit-scrollbar {
-  display: none;
-}
-
-#scrollable-container {
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
