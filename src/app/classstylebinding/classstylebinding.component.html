@@ -1,0 +1,15 @@
+<p [class]='classesToApply'> Class Binding </p>
+<h1 [class.colorClass]="isColor"> Single Class Binding </h1>
+<h2 [class]="classExpression"> Multiclass Binding </h2>
+
+<button type="button" [style.color]="status === 'error' ? 'red' : 'blue' "> Style </button>
+<br>
+<button type="button" [style.color]="getColor()"> Style </button>
+
+<p [style.font-size.px]="'100'"> Setting the units </p>
+
+<p [style.color]="getColor()"
+   [style.font-size.px]="'20'"
+   [style.background-color]="status=='error' ? 'red': 'blue'">
+  paragraph with multiple styles
+</p>

@@ -11,6 +11,7 @@ import {NgOptimizedImage} from "@angular/common";
 import {TestComponent} from './test/test.component';
 import {FormsModule} from "@angular/forms";
 import {CartService} from "./cart.service";
+import { ClassstylebindingComponent } from './classstylebinding/classstylebinding.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {CartService} from "./cart.service";
     HomeComponent,
     CartComponent,
     NavbarComponent,
-    TestComponent
+    TestComponent,
+    ClassstylebindingComponent
   ],
   imports: [
     BrowserModule,
