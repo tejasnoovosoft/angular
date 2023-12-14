@@ -24,4 +24,10 @@ export class ClassstylebindingComponent implements OnInit {
   getColor(){
     return 'black';
   }
+
+  imageUrl: string = "https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/imgTag.png"
+
+  isUnchanged: boolean = true
+
+  fontSizePx: number = 16
 }
