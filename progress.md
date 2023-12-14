@@ -22,8 +22,16 @@ DAY2 (13/12/2023) -
   
   5.Implement a small e-commerce project : [https://github.com/tejasnoovosoft/angular/tree/master/src](https://github.com/tejasnoovosoft/angular/tree/master/src)
 
+  ![E-Commerce](screenshots/day2.png)
+
 DAY3 (14/12/2023) - 
 
-1.Template : [Template-Binding](https://github.com/tejasnoovosoft/angular/tree/master/src/app/classstylebinding)
+  1.Template : [Template-Binding](https://github.com/tejasnoovosoft/angular/tree/master/src/app/classstylebinding)
 
-2.Directive : [Directive]()
+  2.Directives : [Directives](https://github.com/tejasnoovosoft/angular/tree/master/src/app/directives)
+
+  3.Component : Overview,Lifecycle
+
+  ![](screenshots/day3.png)
+  ![](screenshots/day3 1.png)
+
