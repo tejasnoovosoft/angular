@@ -33,5 +33,20 @@ DAY3 (14/12/2023) -
   3.Component : Overview,Lifecycle
 
   ![](screenshots/day3.png)
-  ![](screenshots/day3 1.png)
+  ![](screenshots/day31.png)
+
+DAY4 (15/12/2023) -
+  1.Components Life Cycle
+
+  2.Implement Hook functions of component
+
+  3.Sharing Data between parent and child component(@Input(),@Output())
+
+  Link -> [Components-Implementation](https://github.com/tejasnoovosoft/angular/tree/master/src/app/component)
+ 
+  ![](screenshots/day4.png)
+
+  4.Decorators - ViewChild,ViewChildren
+
+  ![](screenshots/day41.png)
 
