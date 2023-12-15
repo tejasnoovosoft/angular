@@ -21,6 +21,8 @@ import { HerosComponent } from './heros/heros.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ChildComponent } from './child/child.component';
 import { InputOutputComponent } from './input-output/input-output.component';
+import { DecoratorsComponent } from './decorators/decorators.component';
+import { ChildDecoratorComponent } from './child-decorator/child-decorator.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { InputOutputComponent } from './input-output/input-output.component';
     HerosComponent,
     UserDetailsComponent,
     ChildComponent,
-    InputOutputComponent
+    InputOutputComponent,
+    DecoratorsComponent,
+    ChildDecoratorComponent
   ],
   imports: [
     BrowserModule,
