@@ -9,6 +9,7 @@ export class ComponentComponent implements OnInit {
 
     data = 0
     showChild: boolean = true
+    items: string[] = ["Television", "Airbuds", "OnePlus", "Fire-bolt"];
 
     user = {
         name: "Alex"
@@ -30,5 +31,13 @@ export class ComponentComponent implements OnInit {
 
     update() {
         this.showChild = !this.showChild
+    }
+
+    addProduct(newItem: string) {
+        this.items.push(newItem)
+    }
+
+    removeProduct(item: string) {
+        this.items = this.items.filter((it) => it !== item)
     }
 }

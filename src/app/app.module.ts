@@ -20,6 +20,7 @@ import { NgChangeDemoComponent } from './ng-change-demo/ng-change-demo.component
 import { HerosComponent } from './heros/heros.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ChildComponent } from './child/child.component';
+import { InputOutputComponent } from './input-output/input-output.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ChildComponent } from './child/child.component';
     NgChangeDemoComponent,
     HerosComponent,
     UserDetailsComponent,
-    ChildComponent
+    ChildComponent,
+    InputOutputComponent
   ],
   imports: [
     BrowserModule,

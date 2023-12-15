@@ -14,3 +14,7 @@
 <hr>
 <app-child *ngIf="showChild"></app-child><br>
 <button class="btn btn-primary" (click)="update()"> Update </button>
+<hr>
+<h1> Sharing Data : @Input() @Output</h1>
+<app-input-output [items]="items" (newItem)="addProduct($event)" (removeItem)="removeProduct($event)"></app-input-output>
+<hr>
