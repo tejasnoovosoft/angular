@@ -1,0 +1,16 @@
+<h1> onChanges </h1>
+<a (click)="changeInParent()"> Change in Parent </a>
+<br>
+<app-ng-change-demo [parentData]="data"></app-ng-change-demo>
+<br>
+<hr>
+<h1> onInit </h1>
+<app-heros></app-heros>
+<hr>
+<h1> Hooks </h1>
+<button (click)="updateUser()" class="btn btn-primary"> Update</button>
+<br>
+<app-user-details [user]="user"></app-user-details>
+<hr>
+<app-child *ngIf="showChild"></app-child><br>
+<button class="btn btn-primary" (click)="update()"> Update </button>

@@ -15,6 +15,11 @@ import { ClassstylebindingComponent } from './classstylebinding/classstylebindin
 import { SizerComponent } from './sizer/sizer.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { ComponentComponent } from './component/component.component';
+import { NgChangeDemoComponent } from './ng-change-demo/ng-change-demo.component';
+import { HerosComponent } from './heros/heros.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     ClassstylebindingComponent,
     SizerComponent,
     DirectivesComponent,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    ComponentComponent,
+    NgChangeDemoComponent,
+    HerosComponent,
+    UserDetailsComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

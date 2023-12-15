@@ -74,7 +74,7 @@
 <hr>
 
 <h1> NgSwitch </h1>
-<div [ngSwitch]="day">
+<ng-template [ngSwitch]="day">
     <div *NgSwitchCase="0">
         Today is Sunday
     </div>
@@ -90,7 +90,7 @@
     <div *ngSwitchDefault>
         In Switch Default
     </div>
-</div>
+</ng-template>
 
 
 
