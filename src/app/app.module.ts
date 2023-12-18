@@ -24,6 +24,10 @@ import { InputOutputComponent } from './input-output/input-output.component';
 import { DecoratorsComponent } from './decorators/decorators.component';
 import { ChildDecoratorComponent } from './child-decorator/child-decorator.component';
 import { ChildContentComponent } from './child-content/child-content.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { ExponentialPipe } from './pipes/exponential.pipe';
+import { MultiplyByTenPipe } from './pipes/multiply-by-ten.pipe';
+import { FetchPipe } from './pipes/fetch.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { ChildContentComponent } from './child-content/child-content.component';
     InputOutputComponent,
     DecoratorsComponent,
     ChildDecoratorComponent,
-    ChildContentComponent
+    ChildContentComponent,
+    PipesComponent,
+    ExponentialPipe,
+    MultiplyByTenPipe,
+    FetchPipe
   ],
   imports: [
     BrowserModule,
