@@ -1,5 +1,16 @@
-import {AfterViewInit, Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ContentChild,
+  ContentChildren,
+  ElementRef,
+  QueryList,
+  ViewChild,
+  ViewChildren
+} from '@angular/core';
 import {ChildDecoratorComponent} from "../child-decorator/child-decorator.component";
+import {ChildContentComponent} from "../child-content/child-content.component";
+import {ChildComponent} from "../child/child.component";
 
 @Component({
     selector: 'app-decorators',
@@ -16,6 +27,9 @@ export class DecoratorsComponent implements AfterViewInit {
     @ViewChild('lastComponent') child!: ChildDecoratorComponent
 
     // @ViewChild('lastComponent') child: ChildDecoratorComponent | null = null
+
+  @ContentChild('projectedParagraph', {static: false}) projectedParagraph!: ElementRef;
+  @ContentChildren(ChildContentComponent) childrenContent!: QueryList<ChildComponent>;
 
     constructor() {
     }
@@ -37,4 +51,12 @@ export class DecoratorsComponent implements AfterViewInit {
     ngOnInit() {
         console.log(`${this.childComponent} in OnInit`)
     }
+
+  ngAfterContentInit() {
+    console.log('Projected paragraph:', this.projectedParagraph.nativeElement.textContent);
+
+    this.childrenContent.forEach(child => {
+      console.log('Child component:', child);
+    });
+  }
 }

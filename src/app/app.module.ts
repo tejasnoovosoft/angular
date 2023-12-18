@@ -23,6 +23,7 @@ import { ChildComponent } from './child/child.component';
 import { InputOutputComponent } from './input-output/input-output.component';
 import { DecoratorsComponent } from './decorators/decorators.component';
 import { ChildDecoratorComponent } from './child-decorator/child-decorator.component';
+import { ChildContentComponent } from './child-content/child-content.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ChildDecoratorComponent } from './child-decorator/child-decorator.compo
     ChildComponent,
     InputOutputComponent,
     DecoratorsComponent,
-    ChildDecoratorComponent
+    ChildDecoratorComponent,
+    ChildContentComponent
   ],
   imports: [
     BrowserModule,
