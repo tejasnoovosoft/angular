@@ -30,6 +30,8 @@ export class DecoratorsComponent implements AfterViewInit {
             console.log(child)
         })
         console.log(this.child, "Selected One Child")
+
+      this.childComponent.name = 'Angular in Child Component'
     }
 
     ngOnInit() {
