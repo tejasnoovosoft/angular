@@ -43,10 +43,20 @@ DAY4 (15/12/2023) -
   3.Sharing Data between parent and child component(@Input(),@Output())
 
   Link -> [Components-Implementation](https://github.com/tejasnoovosoft/angular/tree/master/src/app/component)
- 
-  ![](screenshots/day4.png)
+
+![](screenshots/day4.png)
 
   4.Decorators - ViewChild,ViewChildren
 
-  ![](screenshots/day41.png)
+![](screenshots/day41.png)
+
+DAY5 (18/12/2023)
+
+  1.Revised Decorators - (ViewChild,ViewChildren)
+
+  2.Pipes - [Implementation of Pipes](https://github.com/tejasnoovosoft/angular/tree/master/src/app/pipes)
+
+![](screenshots/pipes.png)
+
+  3.Modules
 
