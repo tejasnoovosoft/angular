@@ -19,7 +19,6 @@ import {ComponentComponent} from './component/component.component';
 import {NgChangeDemoComponent} from './ng-change-demo/ng-change-demo.component';
 import {HerosComponent} from './heros/heros.component';
 import {UserDetailsComponent} from './user-details/user-details.component';
-import {ChildComponent} from './child/child.component';
 import {InputOutputComponent} from './input-output/input-output.component';
 import {DecoratorsComponent} from './decorators/decorators.component';
 import {ChildDecoratorComponent} from './child-decorator/child-decorator.component';
@@ -30,6 +29,8 @@ import {MultiplyByTenPipe} from './pipes/multiply-by-ten.pipe';
 import {FetchPipe} from './pipes/fetch.pipe';
 import {ProductsModule} from "./products/products.module";
 import {AppRoutingModule} from "./approuting.module";
+import {DepInjectionComponent} from "./dep-injection/dep-injection.component";
+import {ChildComponent} from "./dep-injection/child/child.component"
 
 @NgModule({
   declarations: [
@@ -54,7 +55,9 @@ import {AppRoutingModule} from "./approuting.module";
     PipesComponent,
     ExponentialPipe,
     MultiplyByTenPipe,
-    FetchPipe
+    FetchPipe,
+    DepInjectionComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
