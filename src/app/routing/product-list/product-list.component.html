@@ -1,0 +1,14 @@
+<div class="p-4">
+    <select class="form-select form-select-lg mb-3" aria-label="Default select example"
+            (change)="onCategoryChange($event)">
+        <option value="all" selected hidden> Select Category </option>
+        <option value="smartphone"> smartphone</option>
+        <option value="jewelery"> jewelery</option>
+        <option value="electronics"> electronics</option>
+    </select>
+</div>
+<hr>
+<div *ngFor="let product of filteredProducts">
+    {{product.title}}
+    <hr>
+</div>

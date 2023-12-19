@@ -31,6 +31,8 @@ import {ProductsModule} from "./products/products.module";
 import {AppRoutingModule} from "./approuting.module";
 import {DepInjectionComponent} from "./dep-injection/dep-injection.component";
 import {ChildComponent} from "./dep-injection/child/child.component"
+import {RoutingModule} from "./routing/routing.module";
+import {PageNotFoundComponent} from "./routing/page-not-found/page-not-found.component";
 
 @NgModule({
   declarations: [
@@ -67,14 +69,20 @@ import {ChildComponent} from "./dep-injection/child/child.component"
       {path: "", component: HomeComponent, title: "Home | Ecomzy"},
       {path: "home", component: HomeComponent, title: "Home | Ecomzy"},
       {path: "cart", component: CartComponent, title: "Cart | Ecomzy"},
-      {path: "test", component: TestComponent, title: "Test | Ecomzy"}
+      {path: "test", component: TestComponent, title: "Test | Ecomzy"},
+      {path: "**", component: PageNotFoundComponent, title: "404 Not Found | Ecomzy"}
     ]),
     NgOptimizedImage,
     FormsModule,
     ProductsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    RoutingModule
   ],
   providers: [CartService],
+  exports: [
+    HomeComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

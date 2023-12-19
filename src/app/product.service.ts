@@ -24,4 +24,8 @@ export class ProductService {
   getProducts() {
     return this.http.get<Product[]>('/assets/products.json')
   }
+
+  getProductsByCategory(category: string) {
+    return this.http.get<Product[]>(`https://dummyjson.com/products/category/${category}`)
+  }
 }
