@@ -60,3 +60,15 @@ DAY5 (18/12/2023)
 
   3.Modules
 
+DAY6 (19/12/2023)
+
+  1.Feature Module - [Implementation](https://github.com/tejasnoovosoft/angular/tree/master/src/app/products)
+
+  ![](screenshots/custom-module.png)  
+
+  2.Dependency Injection and Services - [Implementation](https://github.com/tejasnoovosoft/angular/tree/master/src/app/dep-injection)
+
+  ![](screenshots/depency-injection.png)
+
+  3.Routing and Navigation - [Implementation](https://github.com/tejasnoovosoft/angular/tree/master/src/app/routing)
+
