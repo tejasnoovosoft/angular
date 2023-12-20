@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from "../../User";
-import {FormArray, FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
     selector: 'app-users',
@@ -18,9 +18,9 @@ export class UsersComponent implements OnInit {
     }
 
     formData = new FormGroup({
-        name: new FormControl(''),
-        password: new FormControl(''),
-        state: new FormControl(''),
+        name: new FormControl('',Validators.required),
+        password: new FormControl('',Validators.required),
+        state: new FormControl('',Validators.required),
         aliases: this.formBuilder.array([this.formBuilder.control('')]),
     })
 
