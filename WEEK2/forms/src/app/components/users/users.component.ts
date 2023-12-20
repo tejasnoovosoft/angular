@@ -43,10 +43,8 @@ export class UsersComponent implements OnInit {
     }
 
     editInfo(user: User) {
-        /*this.formData = new FormGroup({
-            name: new FormControl(user.name),
-            password: new FormControl(user.password),
-            state: new FormControl(user.state)
-        })*/
+        this.formData.controls['name'].setValue(user.name);
+        this.formData.controls['password'].setValue(user.password);
+        this.formData.controls['state'].setValue(user.state);
     }
 }
