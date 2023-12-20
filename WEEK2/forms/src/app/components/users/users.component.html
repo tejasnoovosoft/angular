@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="users-list">
+    <h2> User List </h2>
+    <table class="table table-bordered table-striped">
+      <thead class="table-light">
+      <tr>
+        <th>Name</th>
+        <th>Password</th>
+        <th>State</th>
+        <th>Aliases</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.state }}</td>
+        <td> {{user.aliases}}</td>
+        <td>
+          <button type="button" class="btn btn-secondary" (click)="editInfo(user)"> Edit</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="add-user-form">
+    <h2> Add User </h2>
+    <form class="container mt-4 d-flex flex-column w-75 p-2" [formGroup]="formData" (ngSubmit)="addUser(formData)">
+      <div class="mb-3">
+        <label for="name" class="form-label">Username</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter Name" formControlName="name">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter Password"
+               formControlName="password">
+      </div>
+      <div class="mb-3">
+        <label for="state" class="form-label">State</label>
+        <input type="text" class="form-control" id="state" placeholder="Enter State" formControlName="state">
+      </div>
+      <div formArrayName="aliases" class="d-flex flex-column justify-content-evenly">
+        <span>Aliases</span>
+        <button type="button" class="btn btn-secondary" (click)="addAlias()">+ Add another alias</button>
+
+        <div *ngFor="let alias of aliases.controls; let i=index" class="mt-2 d-flex justify-content-center">
+          <label for="alias-{{ i }}" class="me-2">Alias:</label>
+          <input id="alias-{{ i }}" type="text" [formControlName]="i">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary"> Submit</button>
+    </form>
+  </div>
+</div>

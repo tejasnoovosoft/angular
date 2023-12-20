@@ -1,0 +1,15 @@
+<!--<input type="text" [formControl]="favouriteColor">-->
+<!--<button type="button" (click)="updateColor(favouriteColor)"> Update </button>-->
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()" class="container mt-4">
+  <div class="mb-3">
+    <label for="user" class="form-label">Username</label>
+    <input type="text" class="form-control" id="user" placeholder="Enter Name" formControlName="user">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Enter Password" formControlName="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
