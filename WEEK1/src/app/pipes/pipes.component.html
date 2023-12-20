@@ -1,0 +1,96 @@
+<div>
+  <h2> Date </h2>
+  <span>{{date | date}}</span><br>
+  <span> {{date | date:'fullDate'}}</span><br>
+  <span> {{date | date:'shortDate'}}</span><br>
+  <span> {{date | date:'medium'}}</span><br>
+
+  <hr>
+
+  <p>The hero's birthday is {{ birthday | date:"shortDate" }} in the "shortDate" format.</p>
+
+  <p>The hero's birthday is {{ birthday | date:format | uppercase }} in "{{format}}" format.
+    Click the toggle button to change formats.</p>
+
+  <button type="button" (click)="toggleFormat()">Toggle Format</button>
+  <hr>
+  <h3> Chaining of pipes </h3>
+  <p>
+    The chained hero's uppercase birthday is
+    {{ birthday | date | uppercase}}
+  </p>
+
+  <p>
+    The chained hero's uppercase birthday in "fullDate" format is
+    {{ birthday | date:'fullDate' | uppercase}}
+  </p>
+  <hr>
+
+  <h3> Power Booster Calculator : </h3>
+  <div>
+    <label for="normal-pow"> Normal Power : </label>
+    <input class="input-group" id="normal-pow" [(ngModel)]="power">
+    <label for="pow-factor"> Power Factor : </label>
+    <input class="input-group" id="pow-factor" [(ngModel)]="factor">
+    <p> Super Power : {{ power | exponential:factor}}</p>
+  </div>
+
+  <hr>
+  <div>
+    <label for="value"> Enter Value :</label>
+    <input id="value" [(ngModel)]="value">
+    <p> Multiply {{value}} by 10 is {{ value | multiplyByTen}} </p>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <h2> Cases </h2>
+  <span> {{title | uppercase}}</span>
+  <span> {{title | lowercase}}</span>
+  <span> {{title | titlecase}}</span>
+</div>
+
+<div>
+  <h2> Currency </h2>
+  <span> {{price | currency}} </span><br>
+  <span> {{price | currency:'INR'}} </span>
+  <p>{{price | currency:'CAD':'code'}}</p>
+  <span> {{price | currency:'CAD'}} </span>
+  <p>{{price | currency:'CAD':'symbol':'4.2-2'}}</p>
+</div>
+
+<div>
+  <h2> Decimal </h2>
+  <p> {{num | number:'1 0-0'}}</p>
+  <p> {{num}}</p>
+
+  {{3.6 | number: '1.0-0'}} <br>
+  {{num | number:'4.1-5'}}
+</div>
+
+<div>
+  <h2> Percentage </h2>
+  {{marks | percent}}<br>
+  {{marks | percent:'4.1-2'}}<br>
+  {{marks | percent:'4.2-3'}}<br>
+  {{marks | percent:'4.3-5'}}<br>
+</div>
+
+<div>
+  <h2>Async Pipe Example</h2>
+  <p>Data emitted every second: {{ data$ | async }}</p>
+</div>
+
+<div>
+  <h2> JSON Pipe </h2>
+  <p> {{object}}</p>
+  <p> {{object | json}}</p>
+</div>
+
+<div>
+  <h3> Caching Http Requests</h3>
+  <p *ngFor="let product of './assets/products.json'| fetch | json"> {{product}} </p>
+<!--  <p> {{('./assets/products.json' | fetch | json)}}</p>-->
+</div>

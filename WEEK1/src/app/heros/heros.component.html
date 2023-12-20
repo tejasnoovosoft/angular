@@ -1,0 +1,15 @@
+<h1> Tour of Hero </h1>
+
+<ul type="none">
+    <li *ngFor="let hero of heros">
+        <button class="btn btn-primary" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+            <span> {{hero.id}}</span>
+            <span> {{hero.name}}</span>
+        </button>
+    </li>
+</ul>
+
+<p *ngIf="selectedHero"> {{selectedHero.name}} </p>
+<br>
+
+<button class="btn btn-primary" (click)="resetHero()"> Reset</button>

@@ -1,0 +1,15 @@
+li{
+    margin:10px;
+}
+
+p{
+    display: inline-block;
+    border:1px solid red;
+    padding: 20px;
+    font-style: italic;
+}
+
+button.selected {
+    background-color: black;
+    color: white;
+}

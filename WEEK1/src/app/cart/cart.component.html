@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h2>Your Shopping Cart</h2>
+  <div class="row mt-4">
+    <div *ngFor="let item of items" class="col-lg-3 mb-4">
+      <div class="card">
+        <img src="{{item.image}}" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+          <h5 class="card-title"> {{item.title}} </h5>
+          <p class="card-text">{{item.description}}</p>
+          <h5 class="card-price">{{item.price}}</h5>
+          <a href="#" class="btn btn-primary btn-block">Remove</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
