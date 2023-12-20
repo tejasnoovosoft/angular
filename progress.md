@@ -72,3 +72,15 @@ DAY6 (19/12/2023)
 
   3.Routing and Navigation - [Implementation](https://github.com/tejasnoovosoft/angular/tree/master/src/app/routing)
 
+DAY7 (20/12/2023)
+  
+  1.Forms - [Implementation](https://github.com/tejasnoovosoft/angular/tree/master/WEEK2/forms/src/app)
+  
+  ![](screenshots/template-driven2.png)
+
+  ![](screenshots/reactive1.png)
+
+  ![](screenshots/template-driven.png)
+
+  ![](screenshots/reactive.png)
+
