@@ -1,0 +1,28 @@
+<form class="product-form">
+    <input type="text" [(ngModel)]="newProduct.id" placeholder="Id" name="id" required>
+    <input type="text" [(ngModel)]="newProduct.title" placeholder="Title" name="title" required>
+    <input type="text" [(ngModel)]="newProduct.category" placeholder="Category" name="category" required>
+    <input type="number" [(ngModel)]="newProduct.price" placeholder="Price" name="price" required>
+    <div>
+        <button type="submit" (click)="addProduct()">Add Product</button>
+        <button type="submit" (click)="deleteProduct(newProduct.id)">Delete Product</button>
+        <button type="submit" (click)="updateProduct(newProduct.id)">Update Product</button>
+    </div>
+</form>
+
+<div *ngFor="let product of products">
+    <h2> {{product.title}} </h2>
+</div>
+
+<hr>
+
+<div class="search-bar">
+    <input type="text" placeholder="Search..">
+    <button type="submit"> Search</button>
+</div>
+
+<div class="product-card">
+    <div *ngFor="let product of fetchedProducts">
+        {{product.title}}
+    </div>
+</div>
