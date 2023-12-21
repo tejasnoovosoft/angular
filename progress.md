@@ -84,3 +84,18 @@ DAY7 (20/12/2023)
 
   ![](screenshots/reactive.png)
 
+DAY8 (21/12/2023)
+
+  1.Custom Validators
+  
+  ![](screenshots/custom-validation.png)
+  
+  2.Cross-Field Validation
+  
+  ![](screenshots/cross-field-validation.png)
+  
+  3.HTTP Client
+  
+  4.Implement HTTP Methods (GET,POST,PUT) - [Implementation](https://github.com/tejasnoovosoft/angular/tree/master/WEEK2/httpClient/src/app)
+  
+  ![](screenshots/http.png)
