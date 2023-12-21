@@ -19,4 +19,5 @@ export class TemplateDrivenFormComponent implements OnInit {
     console.log(user.controls)
   }
 
+    protected readonly name = name;
 }

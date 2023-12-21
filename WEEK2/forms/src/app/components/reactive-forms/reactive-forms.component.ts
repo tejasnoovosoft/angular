@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 
 @Component({
@@ -12,8 +12,9 @@ export class ReactiveFormsComponent implements OnInit {
   favouriteColor = new FormControl('Blue')
   loginForm = new FormGroup(
     {
-      user: new FormControl(''),
-      password: new FormControl('')
+      user: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+      email: new FormControl('', this.validateEmail)
     })
 
   constructor() {
@@ -33,4 +34,12 @@ export class ReactiveFormsComponent implements OnInit {
     console.log(this.loginForm.value)
   }
 
+  validateEmail(control: any) {
+    let EMAIL_REGEXP = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return EMAIL_REGEXP.test(control.value) ? null : {
+      validateEmail: {
+        valid: false
+      }
+    };
+  }
 }

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgForm} from "@angular/forms";
+import {FormControl, NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-registration',
@@ -17,5 +17,4 @@ export class RegistrationComponent implements OnInit {
   submit(login: NgForm) {
     console.log(login)
   }
-
 }

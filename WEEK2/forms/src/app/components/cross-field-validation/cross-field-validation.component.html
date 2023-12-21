@@ -1,0 +1,25 @@
+<form [formGroup]="formData" class="container mt-4">
+  <div class="mb-3">
+    <label for="user" class="form-label">Username</label>
+    <input type="text" class="form-control" id="user" placeholder="Enter Name" formControlName="name">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Enter Password" formControlName="password">
+  </div>
+  <div class="mb-3">
+    <label for="confirmPass" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="confirmPass" placeholder="Confirm Password"
+           formControlName="confirmPassword">
+  </div>
+  <div
+    *ngIf="
+    formData.errors?.['validatePassword'] &&
+    (formData.touched)
+  "
+    class="cross-validation-error-message alert alert-danger"
+  >
+    Password not matched
+  </div>
+  <button type="submit" class="btn btn-primary">Signup</button>
+</form>
